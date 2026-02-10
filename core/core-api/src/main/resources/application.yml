@@ -1,6 +1,14 @@
 spring.application.name: core-api
 spring.profiles.active: local
 
+pki:
+  key-encryption-secret: ${PKI_KEY_SECRET:dev-secret-change-in-prod}
+  default-validity-days:
+    root-ca: 7300
+    sub-ca: 3650
+    end-entity: 365
+  crl-distribution-base-url: ${PKI_CRL_BASE_URL:http://localhost:8080}
+
 spring:
   config:
     import:

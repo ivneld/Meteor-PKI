@@ -1,6 +1,8 @@
 dependencies {
     implementation project(':core:core-enum')
     api 'org.springframework.boot:spring-boot-starter-data-jpa'
+    api "org.bouncycastle:bcpkix-jdk18on:${bouncyCastleVersion}"
+    api "org.bouncycastle:bcprov-jdk18on:${bouncyCastleVersion}"
     runtimeOnly 'com.mysql:mysql-connector-j'
     runtimeOnly 'com.h2database:h2'
 }
